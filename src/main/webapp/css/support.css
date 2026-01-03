@@ -1,0 +1,238 @@
+/* FindNext - Support Page Stylesheet */
+/* Styles for support ticket form and help categories */
+
+/* Main support page container */
+.support-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.support-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    padding: 3rem 2rem;
+    border-radius: var(--radius-2xl);
+    color: var(--white);
+}
+
+.support-header h1 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.support-header p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.support-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.support-category {
+    background: var(--white);
+    border: 2px solid var(--gray-light);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.support-category:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.support-category i {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.support-category h3 {
+    margin-bottom: 0.5rem;
+}
+
+.support-category p {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.complaint-form-section {
+    background: var(--white);
+    border: 2px solid var(--gray-light);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.complaint-form-section h2 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.priority-selector {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.priority-option {
+    flex: 1;
+    padding: 1rem;
+    border: 2px solid var(--gray-light);
+    border-radius: var(--radius-md);
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.priority-option input[type="radio"] {
+    display: none;
+}
+
+.priority-option:hover {
+    border-color: var(--primary);
+    background: var(--light);
+}
+
+.priority-option input[type="radio"]:checked + label {
+    color: var(--white);
+}
+
+.priority-option.low input[type="radio"]:checked ~ * {
+    background: var(--success);
+    border-color: var(--success);
+}
+
+.priority-option.medium input[type="radio"]:checked ~ * {
+    background: var(--warning);
+    border-color: var(--warning);
+}
+
+.priority-option.high input[type="radio"]:checked ~ * {
+    background: var(--danger);
+    border-color: var(--danger);
+}
+
+.priority-low {
+    border-color: var(--success);
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.priority-medium {
+    border-color: var(--warning);
+    background: rgba(245, 158, 11, 0.1);
+}
+
+.priority-high {
+    border-color: var(--danger);
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.quick-help {
+    background: var(--light);
+    padding: 2rem;
+    border-radius: var(--radius-xl);
+    margin-top: 2rem;
+}
+
+.quick-help h3 {
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+
+.help-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.help-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: var(--white);
+    border-radius: var(--radius-md);
+    color: var(--dark);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.help-link:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateX(5px);
+}
+
+.help-link i {
+    color: var(--primary);
+}
+
+.help-link:hover i {
+    color: var(--white);
+}
+
+/* Support Page */
+@media (max-width: 768px) {
+    .support-container {
+        padding: 1rem;
+    }
+
+    .support-header {
+        padding: 2rem 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .support-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .support-header p {
+        font-size: 0.95rem;
+    }
+
+    .support-categories {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .support-category {
+        padding: 1.5rem;
+    }
+
+    .support-category i {
+        font-size: 2.5rem;
+    }
+
+    .complaint-form-section {
+        padding: 1.5rem;
+    }
+
+    .complaint-form-section h2 {
+        font-size: 1.25rem;
+    }
+
+    .priority-selector {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .priority-option {
+        padding: 0.75rem;
+    }
+
+    .help-resources {
+        grid-template-columns: 1fr;
+    }
+}

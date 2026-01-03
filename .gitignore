@@ -1,0 +1,59 @@
+# FindNext - Git ignore rules
+
+# --- OS / Editor junk ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# --- Java / build output ---
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+
+# Common build dirs
+build/
+out/
+target/
+
+# --- Logs / temp ---
+*.log
+logs/
+log/
+tmp/
+temp/
+
+# --- IDE metadata ---
+# Eclipse
+.project
+.classpath
+.settings/
+
+# IntelliJ
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# --- Runtime / user uploaded content (adjust if your app uses a specific folder) ---
+uploads/
+resumes/
+
+# --- Secrets (do not commit) ---
+.env
+.env.*
+ENV
+ENV.*
+*.keystore
+*.p12
+*.pfx
+
+# --- Server / app containers ---
+# Tomcat local deployment directories (if you ever copy them into the repo)
+webapps/
+work/
+conf/
+logs/
+

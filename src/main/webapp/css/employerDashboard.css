@@ -1,0 +1,235 @@
+/* FindNext - Employer Dashboard Stylesheet */
+/* Styles for employer's job management dashboard and posted jobs table */
+
+/* Dashboard header with welcome message and action buttons */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.welcome-message {
+  flex-grow: 1;
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.mobile-filter-btn {
+    display: none; /* Hidden on desktop by default */
+}
+
+.desktop-filter-form {
+    display: block; /* Visible on desktop by default */
+}
+
+.employer-jobs-table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.employer-jobs-table .table {
+    width: 100%;
+}
+
+.employer-jobs-table .table th:nth-child(1) { width: 40%; } /* Job Title */
+.employer-jobs-table .table th:nth-child(2) { width: 15%; } /* Applicants */
+.employer-jobs-table .table th:nth-child(3) { width: 15%; } /* Status */
+.employer-jobs-table .table th:nth-child(4) { width: 30%; text-align: center; } /* Action */
+
+.employer-jobs-table th,
+.employer-jobs-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.employer-jobs-table td:nth-child(4) {
+    text-align: center;
+}
+
+.employer-jobs-table .table td .btn {
+    margin: 0 0.25rem;
+}
+
+.employer-jobs-table th {
+    background-color: #f9f9f9;
+    font-weight: 600;
+}
+
+.employer-jobs-table td {
+    vertical-align: middle;
+}
+
+.employer-jobs-cards {
+    display: none;
+}
+
+/* Job Cards for Mobile */
+.employer-job-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: box-shadow 0.3s;
+}
+
+.employer-job-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.employer-job-title {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+.employer-job-info {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.employer-job-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.employer-job-actions .btn {
+    flex: 1;
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+#openFilterModalBtn {
+    display: none;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .employer-jobs-table {
+        display: table;
+    }
+
+    .employer-jobs-table th,
+    .employer-jobs-table td {
+        padding: 0.5rem;
+    }
+}
+
+/* Mobile Responsive (max 768px) */
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-actions {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .post-job-btn,
+    .mobile-filter-btn {
+        flex: 1;
+    }
+
+    .mobile-filter-btn {
+        display: inline-flex; /* Show on mobile */
+    }
+
+    .desktop-filter-form {
+        display: none !important; /* Hide on mobile */
+    }
+
+    .action-buttons {
+        width: 100%;
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #openFilterModalBtn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .employer-jobs-table {
+        display: none;
+    }
+
+    .employer-jobs-cards {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-actions {
+        flex-direction: column;
+    }
+
+    .employer-job-card {
+        padding: 1rem;
+        text-align: left;
+    }
+
+    .employer-job-title h4 {
+        font-size: 1.2rem;
+        color: #333;
+        margin-bottom: 0.75rem;
+    }
+
+    .employer-job-info {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .employer-job-info strong {
+        color: #555;
+    }
+
+    .employer-job-info .applicant-count {
+        color: #007bff;
+        font-weight: bold;
+    }
+
+    .employer-job-status.active {
+        color: #28a745;
+        font-weight: bold;
+    }
+
+    .employer-job-status.inactive {
+        color: #dc3545;
+        font-weight: bold;
+    }
+
+    .employer-job-actions {
+        display: flex;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .employer-job-actions .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+}

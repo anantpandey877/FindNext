@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <listener>
+        <listener-class>in.findnext.dbutils.AppInitializer</listener-class>
+    </listener>
+
+    <context-param>
+        <param-name>appName</param-name>
+        <param-value>FindNext</param-value>
+    </context-param>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>IndexPage</servlet-name>
+        <jsp-file>/index.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IndexPage</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LoginPage</servlet-name>
+        <jsp-file>/login.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginPage</servlet-name>
+        <url-pattern>/signin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RegisterPage</servlet-name>
+        <jsp-file>/register.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterPage</servlet-name>
+        <url-pattern>/signup</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ContactPage</servlet-name>
+        <jsp-file>/contact.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContactPage</servlet-name>
+        <url-pattern>/get-in-touch</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SupportPage</servlet-name>
+        <jsp-file>/support.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SupportPage</servlet-name>
+        <url-pattern>/help</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FAQPage</servlet-name>
+        <jsp-file>/faq.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FAQPage</servlet-name>
+        <url-pattern>/faqs</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ForgotPasswordPage</servlet-name>
+        <jsp-file>/forgotPassword.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ForgotPasswordPage</servlet-name>
+        <url-pattern>/recover-password</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ResetPasswordPage</servlet-name>
+        <jsp-file>/resetPassword.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ResetPasswordPage</servlet-name>
+        <url-pattern>/new-password</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>VerifyOtpPage</servlet-name>
+        <jsp-file>/verifyOtp.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VerifyOtpPage</servlet-name>
+        <url-pattern>/verify</url-pattern>
+    </servlet-mapping>
+
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/error.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error.jsp</location>
+    </error-page>
+
+</web-app>

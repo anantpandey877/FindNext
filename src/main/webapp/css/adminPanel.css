@@ -1,0 +1,393 @@
+/* FindNext - Admin Panel Stylesheet */
+/* Styles for admin dashboard with user/job management tables and cards */
+
+/* User management table container */
+.users-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 2rem;
+}
+
+.users-table {
+    width: 100%;
+    min-width: 600px;
+}
+
+/* Desktop */
+.users-desktop-table {
+    display: block;
+}
+
+.users-mobile-cards {
+    display: none;
+}
+
+/* User Cards for Mobile */
+.user-card-admin {
+    background: var(--white);
+    border: 2px solid var(--gray-light);
+    border-radius: var(--radius-xl);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.user-card-admin:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary);
+}
+
+.user-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--gray-light);
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.user-card-info {
+    flex: 1;
+}
+
+.user-card-info h4 {
+    margin: 0 0 0.25rem 0;
+    color: var(--dark);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.user-card-info p {
+    margin: 0;
+    color: var(--gray);
+    font-size: 0.85rem;
+}
+
+.user-card-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.user-info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--gray-dark);
+}
+
+.user-info-item i {
+    color: var(--primary);
+    width: 20px;
+}
+
+.user-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius-md);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.user-status-active {
+    background: rgba(16, 185, 129, 0.1);
+    color: #059669;
+}
+
+.user-status-blocked {
+    background: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
+}
+
+.user-role-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius-md);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.user-role-seeker {
+    background: rgba(59, 130, 246, 0.1);
+    color: #2563eb;
+}
+
+.user-role-employer {
+    background: rgba(168, 85, 247, 0.1);
+    color: #7c3aed;
+}
+
+.user-card-actions {
+    padding-top: 1rem;
+    border-top: 2px solid var(--gray-light);
+}
+
+.user-card-actions .btn {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.65rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* Job Listings Cards for Mobile */
+.job-listings-container {
+    margin-top: 2rem;
+}
+
+.job-card-admin {
+    background: var(--white);
+    border: 2px solid var(--gray-light);
+    border-radius: var(--radius-xl);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.job-card-admin:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary);
+}
+
+.job-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--gray-light);
+}
+
+.job-card-title {
+    flex: 1;
+}
+
+.job-card-title h4 {
+    margin: 0 0 0.25rem 0;
+    color: var(--dark);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.job-card-title p {
+    margin: 0;
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.job-card-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.job-info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--gray-dark);
+}
+
+.job-info-item i {
+    color: var(--primary);
+    width: 20px;
+}
+
+.job-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--gray-light);
+}
+
+.job-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius-md);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.job-status-active {
+    background: rgba(16, 185, 129, 0.1);
+    color: #059669;
+}
+
+.job-status-inactive {
+    background: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
+}
+
+.job-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* Desktop */
+.desktop-table {
+    display: block;
+}
+
+.mobile-cards {
+    display: none;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .job-card-body {
+        grid-template-columns: 1fr;
+    }
+
+    .users-table {
+        font-size: 0.9rem;
+    }
+
+    .users-table th,
+    .users-table td {
+        padding: 0.75rem 0.5rem;
+    }
+}
+
+/* Mobile Responsive (max 768px) */
+@media (max-width: 768px) {
+    /* Hide desktop table, show mobile cards for jobs */
+    .desktop-table {
+        display: none;
+    }
+
+    .mobile-cards {
+        display: block;
+    }
+
+    /* Hide desktop table, show mobile cards for users */
+    .users-desktop-table {
+        display: none;
+    }
+
+    .users-mobile-cards {
+        display: block;
+    }
+
+    .job-card-admin,
+    .user-card-admin {
+        padding: 1rem;
+    }
+
+    .job-card-header,
+    .user-card-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .job-card-body,
+    .user-card-body {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .job-card-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .job-status-badge {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .job-actions {
+        width: auto;
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .job-actions .btn {
+        flex: 0;
+        width: auto;
+        max-width: fit-content;
+        padding: 0.625rem 1.25rem;
+        font-size: 0.875rem;
+    }
+
+    /* Users table mobile optimization */
+    .users-table-container {
+        border-radius: var(--radius-lg);
+    }
+
+    .users-table {
+        font-size: 0.85rem;
+        min-width: 550px;
+    }
+
+    .users-table th,
+    .users-table td {
+        padding: 0.5rem 0.35rem;
+        white-space: nowrap;
+    }
+
+    .users-table .btn {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .job-card-admin {
+        padding: 0.75rem;
+    }
+
+    .job-card-title h4 {
+        font-size: 1rem;
+    }
+
+    .job-info-item {
+        font-size: 0.85rem;
+    }
+
+    .job-actions,
+    .user-card-actions {
+        flex-direction: column;
+    }
+
+    .job-actions .btn,
+    .user-card-actions .btn {
+        width: 100%;
+    }
+}

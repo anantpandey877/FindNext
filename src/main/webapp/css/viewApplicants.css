@@ -1,0 +1,207 @@
+/* FindNext - View Applicants Page Stylesheet */
+/* Styles for employer's applicant cards, filters, and status management */
+
+/* Individual applicant card with hover effect */
+.applicant-card {
+	background: var(--white);
+	border-radius: var(--radius-xl);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	padding: 1.5rem;
+	position: relative;
+	transition: all 0.3s ease;
+	border: 2px solid var(--gray-light);
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.applicant-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+	border-color: var(--primary);
+}
+
+.applicant-header {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+	border-bottom: 2px solid var(--gray-light);
+}
+
+.applicant-avatar {
+	width: 50px;
+	height: 50px;
+	border-radius: var(--radius-full);
+	background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--white);
+	font-size: 1.5rem;
+	font-weight: 600;
+	flex-shrink: 0;
+}
+
+.applicant-info {
+	flex: 1;
+}
+
+.applicant-name {
+	font-weight: 600;
+	font-size: 1.1rem;
+	color: var(--dark);
+	margin: 0;
+}
+
+.applicant-id {
+	font-size: 0.85rem;
+	color: var(--gray);
+	margin: 0;
+}
+
+.info-row {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 0.75rem;
+	font-size: 0.9rem;
+}
+
+
+.info-row i {
+	color: var(--primary);
+	width: 20px;
+}
+
+.info-row .btn i {
+	color: var(--white);
+}
+
+.status-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.25rem;
+	padding: 0.35rem 0.75rem;
+	border-radius: var(--radius-md);
+	font-size: 0.85rem;
+	font-weight: 600;
+	text-transform: capitalize;
+}
+
+.status-applied {
+	background: rgba(59, 130, 246, 0.1);
+	color: #2563eb;
+}
+
+.status-shortlisted {
+	background: rgba(16, 185, 129, 0.1);
+	color: #059669;
+}
+
+.status-rejected {
+	background: rgba(239, 68, 68, 0.1);
+	color: #dc2626;
+}
+
+.match-score {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+	color: var(--white);
+	font-size: 0.9rem;
+	padding: 0.5rem 0.75rem;
+	border-radius: var(--radius-md);
+	font-weight: 700;
+	box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+
+.applicant-actions {
+	margin-top: auto;
+	padding-top: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.action-buttons {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.action-buttons .btn {
+	flex: 1;
+}
+
+.view-details-form .btn {
+	width: 100%;
+}
+
+.job-header-card {
+	background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+	color: var(--white);
+	border-radius: var(--radius-xl);
+	padding: 2rem;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	margin-bottom: 2rem;
+}
+
+.job-header-card h3 {
+	color: var(--white);
+	margin-bottom: 0.5rem;
+}
+
+.job-header-card p {
+	color: rgba(255, 255, 255, 0.9);
+	margin: 0;
+}
+
+@media (max-width: 768px) {
+	.row {
+		justify-content: center;
+	}
+	.col-4 {
+		width: 100%;
+		max-width: 400px; /* Max-width for better readability on large phones */
+		padding: 0 1rem;
+		margin-bottom: 2rem;
+		display: flex;
+		justify-content: center;
+	}
+	.applicant-card {
+		width: 100%;
+	}
+	.applicant-actions {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+	.action-button-group {
+		display: flex;
+		width: 100%;
+		gap: 0.5rem;
+	}
+	.action-button-group .action-buttons {
+		display: flex;
+		flex: 1;
+		gap: 0.5rem;
+	}
+	.action-button-group .action-buttons .btn {
+		flex: 1;
+	}
+	.view-details-form {
+		width: 100%;
+	}
+	.view-details-form .btn {
+		width: 100%;
+	}
+	.job-header-card {
+		padding: 1.5rem;
+	}
+
+	.job-header-card h3 {
+		font-size: 1.25rem;
+	}
+}

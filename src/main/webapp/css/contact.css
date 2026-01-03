@@ -1,0 +1,192 @@
+/* FindNext - Contact Page Stylesheet */
+/* Styles for contact form and company information display */
+
+/* Main contact page container */
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-header h1 {
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-info {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius-xl);
+    border: 2px solid var(--gray-light);
+}
+
+.contact-info h3 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--light);
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+}
+
+.info-item:hover {
+    background: var(--gray-light);
+    transform: translateX(5px);
+}
+
+.info-item i {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin-top: 0.25rem;
+}
+
+.info-item div h4 {
+    margin: 0 0 0.5rem 0;
+    color: var(--dark);
+}
+
+.info-item div p {
+    margin: 0;
+    color: var(--gray);
+}
+
+.contact-form {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius-xl);
+    border: 2px solid var(--gray-light);
+}
+
+.contact-form h3 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.social-section {
+    margin-top: 3rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    padding: 3rem;
+    border-radius: var(--radius-2xl);
+    color: var(--white);
+}
+
+.social-section h3 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.social-links-large {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.social-links-large a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    font-size: 1.5rem;
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+}
+
+.social-links-large a:hover {
+    background: var(--white);
+    color: var(--primary);
+    transform: translateY(-5px) scale(1.1);
+}
+
+.map-section {
+    margin-top: 3rem;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    border: 2px solid var(--gray-light);
+}
+
+/* Contact Page */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contact-container {
+        padding: 1rem;
+    }
+
+    .contact-header {
+        margin-bottom: 2rem;
+    }
+
+    .contact-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .info-item {
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .info-item i {
+        font-size: 1.25rem;
+    }
+
+    .info-item div h4 {
+        font-size: 0.95rem;
+    }
+
+    .info-item div p {
+        font-size: 0.85rem;
+    }
+
+    .social-section {
+        padding: 2rem 1rem;
+        margin-top: 2rem;
+    }
+
+    .social-section h3 {
+        font-size: 1.25rem;
+    }
+
+    .social-links-large {
+        gap: 1rem;
+    }
+
+    .social-links-large a {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+}

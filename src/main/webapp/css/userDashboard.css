@@ -1,0 +1,330 @@
+/* FindNext - User Dashboard Styles */
+
+/* ===== WELCOME SECTION ===== */
+.welcome-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.welcome-header h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* ===== ACTION BUTTONS ROW ===== */
+.action-buttons-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.update-resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Mobile filter button - hidden on desktop by default */
+.mobile-filter-btn {
+    display: none;
+}
+
+/* ===== MOBILE (max-width: 768px) ===== */
+@media (max-width: 768px) {
+    .welcome-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .welcome-header h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    /* On mobile, the update button is part of the header block */
+    .update-resume-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+        width: auto; /* Adjust width as needed */
+    }
+
+    .action-buttons-row {
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .mobile-filter-btn {
+        display: inline-flex; /* Show on mobile */
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .desktop-filter-form {
+        display: none; /* Hide on mobile */
+    }
+
+    .job-section .row .col-4 {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .job-card {
+        padding: 1rem;
+    }
+
+    .job-meta {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .job-meta-item {
+        flex: 1 1 calc(50% - 0.5rem);
+        font-size: 0.8rem;
+    }
+
+    .modal-dialog {
+        width: calc(100% - 2rem);
+        margin: 1rem;
+    }
+}
+
+
+/* ===== FILTER BAR - Desktop Layout ===== */
+/* Use higher specificity to override style.css without !important */
+form.filter-bar > .row {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0;
+}
+
+form.filter-bar > .row > .col-4 {
+    flex: 1 1 auto;
+    min-width: 250px;
+    max-width: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+form.filter-bar > .row > .col-2 {
+    flex: 0 1 auto;
+    min-width: 150px;
+    max-width: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+form.filter-bar > .row > .button-row {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 0.75rem;
+    padding: 0;
+    margin: 0;
+}
+
+form.filter-bar > .row > .button-row > .col-1 {
+    flex: 0 0 auto;
+    min-width: 110px;
+    max-width: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+form.filter-bar input,
+form.filter-bar select {
+    width: 100%;
+}
+
+/* Clear button styling */
+form.filter-bar .button-row .col-1:last-child .btn {
+    background-color: transparent;
+    color: #0d6efd;
+    border: 1px solid #0d6efd;
+    box-shadow: none;
+}
+
+form.filter-bar .button-row .col-1:last-child .btn:hover {
+    background-color: #0d6efd;
+    color: #ffffff;
+    border-color: #0b5ed7;
+}
+
+/* ===== JOB SECTIONS ===== */
+.job-section {
+    margin-bottom: 3rem;
+}
+
+/* Job grid layout - more specific than style.css .row */
+.job-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+}
+
+.job-section .col-4 {
+    flex: 0 0 auto;
+    width: 33.333333%;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+}
+
+/* ===== COLLAPSIBLE SECTIONS ===== */
+.collapsible-header {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+    user-select: none;
+}
+
+.collapsible-header:hover {
+    opacity: 0.8;
+}
+
+.toggle-icon {
+    transition: transform 0.3s ease;
+    font-size: 1.25rem;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.toggle-icon.rotated {
+    transform: rotate(-90deg);
+}
+
+.collapsible-content {
+    max-height: 10000px;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.3s ease;
+    opacity: 1;
+}
+
+.collapsible-content.collapsed {
+    max-height: 0;
+    opacity: 0;
+}
+
+/* ===== MODAL OVERRIDES ===== */
+body.modal-open {
+    overflow: hidden;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-dialog {
+    position: relative;
+    z-index: 10001;
+}
+
+.modal-body .alert {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.modal-body .alert ul {
+    margin-left: 1.25rem;
+    padding-left: 0;
+}
+
+.modal-body .alert li {
+    margin-bottom: 0.25rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* ===== TABLET (768px - 1024px) ===== */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .job-section .row .col-4 {
+        width: 50%;
+        max-width: 50%;
+    }
+
+    form.filter-bar > .row > .col-4 {
+        flex: 1 1 250px;
+        max-width: none;
+    }
+
+    form.filter-bar > .row > .col-2 {
+        flex: 1 1 calc(50% - 0.5rem);
+        max-width: none;
+    }
+}
+
+/* ===== MOBILE (< 768px) ===== */
+@media (max-width: 768px) {
+    /* Welcome message - first row */
+    .welcome-header {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .welcome-header h2 {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    /* Action buttons - second row */
+    .action-buttons-row {
+        display: flex;
+        flex-direction: row;
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+        width: 100%;
+    }
+
+    .update-resume-btn {
+        flex: 1;
+        padding: 0.75rem 1rem;
+        font-size: 0.875rem;
+        justify-content: center;
+    }
+
+    /* Show mobile filter button */
+    .mobile-filter-btn {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        padding: 0.75rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    /* Hide desktop filter form on mobile */
+    .desktop-filter-form {
+        display: none;
+    }
+
+    /* Make job columns full width on mobile */
+    .job-section .row .col-4 {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.job-card-actions {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.job-card-actions .btn,
+.job-card-actions .badge {
+    flex-shrink: 0;
+}
+
+.job-card-actions .btn-outline {
+    margin-left: auto;
+}
