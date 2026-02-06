@@ -60,8 +60,6 @@ The application runs under Tomcat’s context path, which usually matches the WA
 Examples:
 
 FindNext.war → /FindNext/  
-HireSense.war → /HireSense/  
-ROOT.war → /  
 
 Main entry route:
 
